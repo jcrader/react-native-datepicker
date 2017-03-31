@@ -116,7 +116,7 @@ class DatePicker extends Component {
       return date;
     }
     let newDate = new Date(date);
-    newDate = new Date( newDate.getTime() + Math.abs(newDate.getTimezoneOffset()*60000) )  );
+    newDate = new Date(newDate.getTime() + Math.abs(newDate.getTimezoneOffset()*60000));
     return newDate;
   }
 
