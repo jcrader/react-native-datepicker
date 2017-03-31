@@ -115,8 +115,9 @@ class DatePicker extends Component {
     if (date instanceof Date) {
       return date;
     }
-
-    return new Date(date);
+    let newDate = new Date(date);
+    newDate = new Date( newDate.getTime() + Math.abs(newDate.getTimezoneOffset()*60000) )  );
+    return newDate;
   }
 
   getDateStr(date = this.props.date) {
