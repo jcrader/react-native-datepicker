@@ -116,7 +116,7 @@ class DatePicker extends Component {
       return date;
     }
 
-    return Moment(date, format).toDate();
+    return Moment(date, format).add(1, 'day').toDate();
   }
 
   getDateStr(date = this.props.date) {
